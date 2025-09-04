@@ -1,0 +1,245 @@
+# BillingServices
+
+A list of all methods in the `BillingServices` service. Click on the method name to view detailed information about that method.
+
+| Methods | Description |
+| :------ | :---------- |
+|[BillingServices_GetAccountManagement](#billingservices_getaccountmanagement)|  |
+|[BillingServices_GetClinicAccountValidity](#billingservices_getclinicaccountvalidity)|  |
+|[BillingServices_UpdateDrugPricesForClinic](#billingservices_updatedrugpricesforclinic)|  |
+|[BillingServices_GetClinicTier](#billingservices_getclinictier)|  |
+|[BillingServices_SetClinicTier](#billingservices_setclinictier)|  |
+|[BillingServices_GetPricesForClinic](#billingservices_getpricesforclinic)|  |
+|[BillingServices_GetTiers](#billingservices_gettiers)|  |
+
+## BillingServices_GetAccountManagement
+
+
+- HTTP Method: `GET`
+- Endpoint: `/v1/billing-account/{clinicId}`
+
+**Parameters**
+
+| Name    | Type| Required | Description |
+| :-------- | :----------| :----------| :----------|
+| $clinicId | string | ✅ |  |
+
+**Return Type**
+
+`Models\GetAccountManagementResponse`
+
+**Example Usage Code Snippet**
+```php
+<?php
+
+use WellSyncServicesCareConnect\Client;
+
+$sdk = new Client(accessToken: 'YOUR_TOKEN');
+
+$response = $sdk->billingServices->billingServicesGetAccountManagement(
+  clinicId: "clinicId"
+);
+
+print_r($response);
+```
+
+## BillingServices_GetClinicAccountValidity
+
+
+- HTTP Method: `GET`
+- Endpoint: `/v1/billing-account/{clinicId}/valid`
+
+**Parameters**
+
+| Name    | Type| Required | Description |
+| :-------- | :----------| :----------| :----------|
+| $clinicId | string | ✅ |  |
+
+**Return Type**
+
+`Models\GetClinicAccountValidityResponse`
+
+**Example Usage Code Snippet**
+```php
+<?php
+
+use WellSyncServicesCareConnect\Client;
+
+$sdk = new Client(accessToken: 'YOUR_TOKEN');
+
+$response = $sdk->billingServices->billingServicesGetClinicAccountValidity(
+  clinicId: "clinicId"
+);
+
+print_r($response);
+```
+
+## BillingServices_UpdateDrugPricesForClinic
+
+
+- HTTP Method: `PUT`
+- Endpoint: `/v1/clinics/{clinicId}/drug_prices`
+
+**Parameters**
+
+| Name    | Type| Required | Description |
+| :-------- | :----------| :----------| :----------|
+| input | Models\BillingServicesUpdateDrugPricesForClinicRequest | ✅ |  |
+| $clinicId | string | ✅ |  |
+
+**Return Type**
+
+`array`
+
+**Example Usage Code Snippet**
+```php
+<?php
+
+use WellSyncServicesCareConnect\Client;
+use WellSyncServicesCareConnect\Models\DrugPrice;
+use WellSyncServicesCareConnect\Models\BillingServicesUpdateDrugPricesForClinicRequest;
+
+$sdk = new Client(accessToken: 'YOUR_TOKEN');
+
+
+$input = new Models\BillingServicesUpdateDrugPricesForClinicRequest(
+  drugPrices: []
+);
+
+$response = $sdk->billingServices->billingServicesUpdateDrugPricesForClinic(
+  input: $input,
+  clinicId: "clinicId"
+);
+
+print_r($response);
+```
+
+## BillingServices_GetClinicTier
+
+
+- HTTP Method: `GET`
+- Endpoint: `/v1/clinics/{clinicId}/tier`
+
+**Parameters**
+
+| Name    | Type| Required | Description |
+| :-------- | :----------| :----------| :----------|
+| $clinicId | string | ✅ |  |
+
+**Return Type**
+
+`Models\GetClinicTierResponse`
+
+**Example Usage Code Snippet**
+```php
+<?php
+
+use WellSyncServicesCareConnect\Client;
+
+$sdk = new Client(accessToken: 'YOUR_TOKEN');
+
+$response = $sdk->billingServices->billingServicesGetClinicTier(
+  clinicId: "clinicId"
+);
+
+print_r($response);
+```
+
+## BillingServices_SetClinicTier
+
+
+- HTTP Method: `PUT`
+- Endpoint: `/v1/clinics/{clinicId}/tier`
+
+**Parameters**
+
+| Name    | Type| Required | Description |
+| :-------- | :----------| :----------| :----------|
+| input | Models\BillingServicesSetClinicTierRequest | ✅ |  |
+| $clinicId | string | ✅ |  |
+
+**Return Type**
+
+`array`
+
+**Example Usage Code Snippet**
+```php
+<?php
+
+use WellSyncServicesCareConnect\Client;
+use WellSyncServicesCareConnect\Models\BillingServicesSetClinicTierRequest;
+
+$sdk = new Client(accessToken: 'YOUR_TOKEN');
+
+
+$input = new Models\BillingServicesSetClinicTierRequest(
+  tier: "tier"
+);
+
+$response = $sdk->billingServices->billingServicesSetClinicTier(
+  input: $input,
+  clinicId: "clinicId"
+);
+
+print_r($response);
+```
+
+## BillingServices_GetPricesForClinic
+
+
+- HTTP Method: `GET`
+- Endpoint: `/v1/prices`
+
+**Parameters**
+
+| Name    | Type| Required | Description |
+| :-------- | :----------| :----------| :----------|
+| $clinicId | string | ❌ |  |
+
+**Return Type**
+
+`Models\GetPricesForClinicResponse`
+
+**Example Usage Code Snippet**
+```php
+<?php
+
+use WellSyncServicesCareConnect\Client;
+
+$sdk = new Client(accessToken: 'YOUR_TOKEN');
+
+$response = $sdk->billingServices->billingServicesGetPricesForClinic(
+  clinicId: "clinicId"
+);
+
+print_r($response);
+```
+
+## BillingServices_GetTiers
+
+
+- HTTP Method: `GET`
+- Endpoint: `/v1/tiers`
+
+
+**Return Type**
+
+`Models\GetTiersResponse`
+
+**Example Usage Code Snippet**
+```php
+<?php
+
+use WellSyncServicesCareConnect\Client;
+
+$sdk = new Client(accessToken: 'YOUR_TOKEN');
+
+$response = $sdk->billingServices->billingServicesGetTiers();
+
+print_r($response);
+```
+
+
+
+
+<!-- This file was generated by liblab | https://liblab.com/ -->
