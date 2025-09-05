@@ -35,7 +35,7 @@ This SDK is compatible with the following versions: `PHP >= 8.0`
 To get started with the SDK, we recommend installing using `composer`:
 
 ```bash
-composer require test/sdk
+composer require kwlodarski/wellsyncsdk
 ```
 
 ## Authentication
