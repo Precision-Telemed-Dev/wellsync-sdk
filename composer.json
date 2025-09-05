@@ -1,5 +1,5 @@
 {
-  "name": "test/sdk",
+  "name": "websystemspl/wellsyncsdk",
   "version": "1.0.0",
   "type": "library",
   "require": {
