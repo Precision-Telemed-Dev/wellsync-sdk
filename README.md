@@ -7,7 +7,7 @@ Welcome to the WellSync Services CareConnect SDK documentation. This guide will 
 
 ## Versions
 
-- SDK version: `1.0.0`
+- SDK version: `1.0.1`
 
 ## About the API
 
