@@ -90,43 +90,44 @@ class PrescriptionItem
     public ?string $patientDob;
 
     public function __construct(
-        ?string $id = null,
-        ?string $prescriptionId = null,
-        ?string $externalId = null,
-        string $drugId,
-        string $dosageId,
-        int $quantity,
-        string $directions,
-        ?string $drugName = null,
-        ?string $dosageConcentration = null,
-        int $daysSupply,
-        ?Shipment $shipmentDetails = null,
-        ?PrescriptionItemShippingMethod $shippingMethod = null,
-        ?string $createdAt = null,
-        ?string $updatedAt = null,
-        ?string $orderId = null,
-        ?PrescriptionStatus $prescriptionStatus = null,
-        ?string $patientId = null,
-        ?string $pharmacyId = null,
-        ?string $pharmacyName = null,
-        ?string $clinicId = null,
-        ?string $clinicianId = null,
-        ?string $agentId = null,
-        ?string $justification = null,
-        int $totalRefills,
-        ?string $patientName = null,
-        ?string $patientDob = null
+    string $drugId,
+    string $dosageId,
+    int $quantity,
+    string $directions,
+    int $daysSupply,
+    int $totalRefills,
+    ?string $id = null,
+    ?string $prescriptionId = null,
+    ?string $externalId = null,
+    ?string $drugName = null,
+    ?string $dosageConcentration = null,
+    ?Shipment $shipmentDetails = null,
+    ?PrescriptionItemShippingMethod $shippingMethod = null,
+    ?string $createdAt = null,
+    ?string $updatedAt = null,
+    ?string $orderId = null,
+    ?PrescriptionStatus $prescriptionStatus = null,
+    ?string $patientId = null,
+    ?string $pharmacyId = null,
+    ?string $pharmacyName = null,
+    ?string $clinicId = null,
+    ?string $clinicianId = null,
+    ?string $agentId = null,
+    ?string $justification = null,
+    ?string $patientName = null,
+    ?string $patientDob = null
     ) {
-        $this->id = $id;
-        $this->prescriptionId = $prescriptionId;
-        $this->externalId = $externalId;
         $this->drugId = $drugId;
         $this->dosageId = $dosageId;
         $this->quantity = $quantity;
         $this->directions = $directions;
-        $this->drugName = $drugName;
-        $this->dosageConcentration = $dosageConcentration;
         $this->daysSupply = $daysSupply;
+    $this->totalRefills = $totalRefills;
+    $this->id = $id;
+    $this->prescriptionId = $prescriptionId;
+    $this->externalId = $externalId;
+    $this->drugName = $drugName;
+    $this->dosageConcentration = $dosageConcentration;
         $this->shipmentDetails = $shipmentDetails;
         $this->shippingMethod = $shippingMethod;
         $this->createdAt = $createdAt;
@@ -140,7 +141,6 @@ class PrescriptionItem
         $this->clinicianId = $clinicianId;
         $this->agentId = $agentId;
         $this->justification = $justification;
-        $this->totalRefills = $totalRefills;
         $this->patientName = $patientName;
         $this->patientDob = $patientDob;
     }

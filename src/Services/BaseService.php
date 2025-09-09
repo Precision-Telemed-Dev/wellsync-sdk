@@ -27,7 +27,11 @@ class BaseService
         $this->tokenPrefix = $tokenPrefix;
 
         $this->options = [
-            'headers' => ['Authorization' => $this->tokenPrefix . $accessToken],
+            'headers' => [
+                'Authorization' => $this->tokenPrefix . $accessToken,
+                'Accept' => 'application/json',
+                'Content-Type' => 'application/json',
+            ],
         ];
 
         $this->baseUrl = $environment;

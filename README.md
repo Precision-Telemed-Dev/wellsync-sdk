@@ -1,4 +1,4 @@
-# WellSync Services CareConnect PHP SDK 1.0.0
+# WellSync Services CareConnect PHP SDK 1.0.2
 
 
 Welcome to the WellSync Services CareConnect SDK documentation. This guide will help you get started with integrating and using the WellSync Services CareConnect SDK in your project.
@@ -7,7 +7,7 @@ Welcome to the WellSync Services CareConnect SDK documentation. This guide will 
 
 ## Versions
 
-- SDK version: `1.0.1`
+- SDK version: `1.0.2`
 
 ## About the API
 

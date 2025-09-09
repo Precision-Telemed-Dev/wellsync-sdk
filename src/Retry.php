@@ -90,7 +90,6 @@ class Retry
         array $options,
         ResponseInterface $response = null
     ): Promise {
-        echo "Retrying request\n";
         $options['retryCount']++;
         $delay = min(
             $options['baseDelayMs'] * pow($options['delayMultiplier'], $options['retryCount']),

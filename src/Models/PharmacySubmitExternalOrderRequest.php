@@ -45,7 +45,7 @@ class PharmacySubmitExternalOrderRequest
         ?Clinician $clinician = null,
         ?PharmacySubmitExternalOrderRequestShippingMethod $shippingMethod = null,
         ?Address $shippingAddress = null,
-        ?array $prescriptionItems = []
+    ?array $prescriptionItems = null
     ) {
         $this->externalCaseId = $externalCaseId;
         $this->symmetricalSigningKey = $symmetricalSigningKey;
